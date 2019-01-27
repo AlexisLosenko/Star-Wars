@@ -1,0 +1,68 @@
+body {
+    background: url(image/starwars.jpg) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#box {
+    perspective: 700px;
+}
+
+#Upsito {
+    position: relative;
+    perspective: 400px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 130%;
+    text-align: justify;
+    color: yellow;
+    width: 100vw;
+    animation: crawl 48s linear;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+@keyframes crawl {
+    0% {
+        top: 600px;
+        transform: rotateX(20deg) translateZ(0);
+    }
+
+    100% {
+        top: -6000px;
+        transform: rotateX(30deg) translateZ(-2500px);
+    }
+}
+
+.intro {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: 1;
+    animation: intro 6s ease-out 1s;
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 300%;
+    opacity: 0;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
